@@ -20,36 +20,47 @@ class _LocationPageState extends State<LocationPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Hava Durumu Nasıl"),
+        centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Hoşgeldiniz",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      body: Center(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          color: Colors.blue,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Hoşgeldiniz",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  getLocation();
+                },
+                child: Text(
+                  "Konuma göre hava durumu",
+                  style: TextStyle(color: Colors.black),
+                ),
+                style: ElevatedButton.styleFrom(primary: Colors.white),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {
+                  // "Başka il seç" butonuna tıklandığında yapılacak işlemler
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => WelcomePage()),
+                  );
+                },
+                child: Text("Farklı il seç",
+                    style: TextStyle(color: Colors.black)),
+                style: ElevatedButton.styleFrom(primary: Colors.white),
+              ),
+            ],
           ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-              getLocation();
-            },
-            child: Text("Konuma göre hava durumu"),
-            style: ElevatedButton.styleFrom(primary: Colors.blue),
-          ),
-          SizedBox(height: 10),
-          ElevatedButton(
-            onPressed: () {
-              // "Başka il seç" butonuna tıklandığında yapılacak işlemler
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => WelcomePage()),
-              );
-            },
-            child: Text("Başka il seç"),
-            style: ElevatedButton.styleFrom(primary: Colors.green),
-          ),
-        ],
+        ),
       ),
     );
   }
