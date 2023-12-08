@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:weather_app/models/suggestions.dart';
 import 'package:weather_app/models/weather.dart';
 import 'package:weather_app/services/api_service.dart';
 import 'package:weather_app/utilities/colors.dart';
@@ -16,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   //String city = "";
   List<Weather> weatherList = [];
+  Suggestions suggestions = Suggestions(sicaklik: 5);
 
   // TextEditingController sehirController = TextEditingController();
 
@@ -89,6 +91,39 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 30.0,
               ),
+              Text(
+                "Öneriler",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 150,
+                  child: Text(
+                    suggestions.oneri(),
+                    textAlign: TextAlign.start,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              // Text(
+              //   "Aktivite",
+              //   style: TextStyle(color: Colors.white, fontSize: 20),
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Container(
+              //     height: 150,
+              //     child: Text(
+              //       suggestions.aktiviteSeviyeleri(),
+              //       textAlign: TextAlign.start,
+              //       style: TextStyle(color: Colors.white),
+              //     ),
+              //   ),
+              // ),
               Expanded(
                 child: ListView.separated(
                   itemCount: weatherList.length - 1,
@@ -173,6 +208,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Iterable result = resultBody['result'];
           weatherList =
               result.map((watherData) => Weather(watherData)).toList();
+          suggestions =
+              Suggestions(sicaklik: double.parse(weatherList[0].degree));
         });
       }
     });
