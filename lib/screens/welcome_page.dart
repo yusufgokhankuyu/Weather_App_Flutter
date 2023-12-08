@@ -17,6 +17,10 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Şehir Seçiniz"),
+        centerTitle: true,
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -34,6 +38,18 @@ class _WelcomePageState extends State<WelcomePage> {
           //           value: sehir,
           //         )
           //     ]),
+
+          // ElevatedButton(
+          //     onPressed: () {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: (context) => HomeScreen(secilenIl: sehirler[0]),
+          //         ),
+          //       );
+          //       print(secilenIl);
+          //     },
+          //     child: const Text("Hava Durumunu Öğren")),
           Expanded(
             child: ListView.builder(
                 itemCount: sehirler.length,
@@ -55,17 +71,6 @@ class _WelcomePageState extends State<WelcomePage> {
                       ));
                 }),
           ),
-          // ElevatedButton(
-          //     onPressed: () {
-          //       Navigator.push(
-          //         context,
-          //         MaterialPageRoute(
-          //           builder: (context) => HomeScreen(),
-          //         ),
-          //       );
-          //       print(secilenIl);
-          //     },
-          //     child: const Text("Hava Durumunu Öğren"))
         ],
       ),
     );
