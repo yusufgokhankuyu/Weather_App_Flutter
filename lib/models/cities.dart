@@ -1,6 +1,6 @@
 class Cities {
   List<String> cities = [
-    "Şehirler",
+    //"Şehirler",
     "Adana",
     "Adıyaman",
     "Afyonkarahisar",
@@ -81,5 +81,6 @@ class Cities {
     "Karabük",
     "Kilis",
     "Osmaniye",
+    "Düzce"
   ];
 }
