@@ -20,20 +20,41 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            DropdownButton(
-                value: secilenIl ?? sehirler[0],
-                onChanged: (yeniIl) {
-                  setState(() {
-                    secilenIl = yeniIl.toString();
-                  });
-                },
-                items: [
-                  for (var sehir in sehirler)
-                    DropdownMenuItem(
-                      child: Text(sehir),
-                      value: sehir,
-                    )
-                ]),
+            // DropdownButton(
+            //     value: secilenIl ?? sehirler[0],
+            //     onChanged: (yeniIl) {
+            //       setState(() {
+            //         secilenIl = yeniIl.toString();
+            //       });
+            //     },
+            //     items: [
+            //       for (var sehir in sehirler)
+            //         DropdownMenuItem(
+            //           child: Text(sehir),
+            //           value: sehir,
+            //         )
+            //     ]),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: sehirler.length,
+                  itemBuilder: (context, index) {
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                HomeScreen(secilenIl: sehirler[index]),
+                          ),
+                        );
+                        print(secilenIl);
+                      },
+                      child: ListTile(
+                        title: Text(sehirler[index]),
+                      ),
+                    );
+                  }),
+            ),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
