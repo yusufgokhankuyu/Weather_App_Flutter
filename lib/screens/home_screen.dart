@@ -8,7 +8,9 @@ import 'package:weather_app/utilities/colors.dart';
 
 class HomeScreen extends StatefulWidget {
   String? secilenIl;
-  HomeScreen({Key? key, required this.secilenIl}) : super(key: key);
+  String? fullAdress;
+  HomeScreen({Key? key, required this.secilenIl, required this.fullAdress})
+      : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -66,8 +68,9 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 20.0,
               ),
+              Text(widget.fullAdress.toString()),
               Image.network(weatherList[0].icon,
-                  width: MediaQuery.of(context).size.width / 3),
+                  width: MediaQuery.of(context).size.width / 4),
               const SizedBox(
                 height: 5.0,
               ),

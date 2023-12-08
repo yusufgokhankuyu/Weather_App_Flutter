@@ -59,8 +59,10 @@ class _WelcomePageState extends State<WelcomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                HomeScreen(secilenIl: sehirler[index]),
+                            builder: (context) => HomeScreen(
+                              secilenIl: sehirler[index],
+                              fullAdress: sehirler[index],
+                            ),
                           ),
                         );
                         print(secilenIl);
