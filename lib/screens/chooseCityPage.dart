@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/models/cities.dart';
+import 'package:weather_app/screens/weatherDetail2.dart';
 import 'package:weather_app/screens/weatherDetailPage.dart';
 import 'package:weather_app/components/plaka.dart';
 
@@ -37,7 +38,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomeScreen(
+                            builder: (context) => WeatherDetail(
                               secilenIl: sehirler[index],
                               fullAdress: sehirler[index],
                             ),

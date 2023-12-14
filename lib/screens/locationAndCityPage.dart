@@ -3,6 +3,7 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/constants/constants.dart';
+import 'package:weather_app/screens/weatherDetail2.dart';
 import 'package:weather_app/screens/weatherDetailPage.dart';
 import 'package:weather_app/screens/chooseCityPage.dart';
 
@@ -195,7 +196,7 @@ class _LocationPageState extends State<LocationPage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeScreen(
+            builder: (context) => WeatherDetail(
               secilenIl: locationMessage,
               fullAdress:
                   "No:${placemark.subThoroughfare}, ${placemark.thoroughfare}, ${placemark.subLocality}, ${placemark.subAdministrativeArea}, ${placemark.administrativeArea}",
