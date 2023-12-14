@@ -3,8 +3,8 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/constants/constants.dart';
-import 'package:weather_app/screens/home_screen.dart';
-import 'package:weather_app/screens/welcome_page.dart';
+import 'package:weather_app/screens/weatherDetailPage.dart';
+import 'package:weather_app/screens/chooseCityPage.dart';
 
 class LocationPage extends StatefulWidget {
   LocationPage({super.key});

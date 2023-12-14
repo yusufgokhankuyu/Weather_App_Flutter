@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Plaka extends StatelessWidget {
   final String sehir;
@@ -16,8 +17,8 @@ class Plaka extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(5.0),
           border: Border.all(
-            color: Colors.black, // Siyah kenarlık rengi
-            width: 2.0, // Kenarlık kalınlığı
+            color: Colors.black,
+            width: 2.0,
           ),
         ),
         child: Row(
@@ -47,7 +48,7 @@ class Plaka extends StatelessWidget {
                 children: [
                   Text(
                     plaka < 10 ? "0$plaka" : plaka.toString(),
-                    style: const TextStyle(
+                    style: GoogleFonts.quicksand(
                       color: Colors.black,
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
@@ -62,7 +63,7 @@ class Plaka extends StatelessWidget {
                 children: [
                   Text(
                     sehir.toUpperCase(),
-                    style: const TextStyle(
+                    style: GoogleFonts.quicksand(
                       color: Colors.black,
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -77,7 +78,7 @@ class Plaka extends StatelessWidget {
                 children: [
                   Text(
                     plaka < 10 ? "0$plaka" : plaka.toString(),
-                    style: const TextStyle(
+                    style: GoogleFonts.quicksand(
                       color: Colors.black,
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,

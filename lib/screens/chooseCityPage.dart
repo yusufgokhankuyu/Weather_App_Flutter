@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/models/cities.dart';
-import 'package:weather_app/screens/home_screen.dart';
-import 'package:weather_app/screens/plaka.dart';
+import 'package:weather_app/screens/weatherDetailPage.dart';
+import 'package:weather_app/components/plaka.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -18,38 +19,15 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Şehir Seçiniz"),
+        title: Text(
+          "Şehir Seçiniz",
+          style: GoogleFonts.quicksand(fontSize: 26),
+        ),
         centerTitle: true,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // DropdownButton(
-          //     value: secilenIl ?? sehirler[0],
-          //     onChanged: (yeniIl) {
-          //       setState(() {
-          //         secilenIl = yeniIl.toString();
-          //       });
-          //     },
-          //     items: [
-          //       for (var sehir in sehirler)
-          //         DropdownMenuItem(
-          //           child: Text(sehir),
-          //           value: sehir,
-          //         )
-          //     ]),
-
-          // ElevatedButton(
-          //     onPressed: () {
-          //       Navigator.push(
-          //         context,
-          //         MaterialPageRoute(
-          //           builder: (context) => HomeScreen(secilenIl: sehirler[0]),
-          //         ),
-          //       );
-          //       print(secilenIl);
-          //     },
-          //     child: const Text("Hava Durumunu Öğren")),
           Expanded(
             child: ListView.builder(
                 itemCount: sehirler.length,

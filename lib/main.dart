@@ -2,8 +2,8 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:weather_app/screens/location.dart';
-import 'package:weather_app/screens/welcome_page.dart';
+import 'package:weather_app/screens/locationAndCityPage.dart';
+import 'package:weather_app/screens/chooseCityPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,10 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Lottie.asset(
             'assets/splashScreen.json',
-            //'https://assets5.lottiefiles.com/packages/lf20_KMqzGr.json',
           ),
           Text('WhatTheWeather',
-              style: GoogleFonts.quicksand(fontSize: 50, color: Colors.black)),
+              style: GoogleFonts.quicksand(fontSize: 36, color: Colors.black)),
           Text(
             'Hava Durumunu Öğren',
             style: GoogleFonts.quicksand(fontSize: 16, color: Colors.black),

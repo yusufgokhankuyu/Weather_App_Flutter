@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 30.0,
               ),
-              Text(
+              const Text(
                 "Öneriler",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
