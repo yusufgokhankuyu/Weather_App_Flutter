@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/constants/constants.dart';
 import 'package:weather_app/screens/home_screen.dart';
 import 'package:weather_app/screens/welcome_page.dart';
@@ -25,59 +26,126 @@ class _LocationPageState extends State<LocationPage> {
       // ),
       body: Container(
         width: MediaQuery.of(context).size.width,
-        color: Colors.blue,
+        color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Text(
-              "Hoşgeldiniz",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 20),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Colors.blue,
-                        Color.fromARGB(255, 152, 203, 153),
-                        Color.fromARGB(255, 95, 141, 179),
-                        Colors.red
-                      ], // Gradient renkleri
-                      begin: Alignment.topLeft, // Başlangıç noktası
-                      end: Alignment.bottomRight, // Bitiş noktası
+                const Icon(
+                  Icons.cloudy_snowing,
+                  color: Colors.grey,
+                  size: 35,
+                ),
+                Text(
+                  "Havanı Öğren",
+                  style: GoogleFonts.quicksand(
+                      fontSize: 28, fontWeight: FontWeight.bold),
+                ),
+                const Icon(Icons.cloud, color: Colors.blue, size: 35),
+              ],
+            ),
+            const SizedBox(height: 30),
+            Column(
+              children: [
+                InkWell(
+                  onTap: () {
+                    getLocation();
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.blue.shade50,
+                          Colors.blue.shade100,
+                          Colors.blue.shade200,
+                          Colors.blue.shade600
+                        ], // Gradient renkleri
+                        begin: Alignment.topRight, // Başlangıç noktası
+                        end: Alignment.bottomLeft, // Bitiş noktası
+                      ),
+                    ),
+                    height: MediaQuery.of(context).size.height / 3,
+                    width: MediaQuery.of(context).size.width * 0.95,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.location_on_outlined,
+                          size: 35,
+                        ),
+                        Text(
+                          "Konuma göre hava durumu",
+                          style: GoogleFonts.quicksand(
+                              color: Colors.black,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "(Bulunduğunuz konumun hava durumunu öğrenmek için tıklayınız.)",
+                          style: GoogleFonts.quicksand(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  height: MediaQuery.of(context).size.height / 2,
-                  width: MediaQuery.of(context).size.width / 2,
-                  child: const Text(
-                    "Konuma göre hava durumu",
-                    style: TextStyle(color: Colors.black),
-                  ),
                 ),
-                Container(
-                  height: MediaQuery.of(context).size.height / 2,
-                  width: MediaQuery.of(context).size.width / 2,
-                  child: Card(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        // "Başka il seç" butonuna tıklandığında yapılacak işlemler
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => WelcomePage()),
-                        );
-                      },
-                      child: Text("Farklı il seç",
-                          style: TextStyle(color: Colors.black)),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.transparent),
+                const SizedBox(
+                  height: 10,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const WelcomePage()),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.blue.shade50,
+                          Colors.blue.shade100,
+                          Colors.blue.shade200,
+                          Colors.blue.shade600
+                        ], // Gradient renkleri
+                        begin: Alignment.topLeft, // Başlangıç noktası
+                        end: Alignment.bottomRight, // Bitiş noktası
+                      ),
+                    ),
+                    height: MediaQuery.of(context).size.height / 3,
+                    width: MediaQuery.of(context).size.width * 0.95,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.cloud_sharp,
+                          size: 35,
+                        ),
+                        Text("Farklı il seç",
+                            style: GoogleFonts.quicksand(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black)),
+                        Text(
+                          "(Türkiye'de diğer illerin hava durumunu öğrenmek için tıklayınız.)",
+                          style: GoogleFonts.quicksand(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
