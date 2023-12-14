@@ -18,48 +18,72 @@ class _LocationPageState extends State<LocationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Hava Durumu Nasıl"),
-        centerTitle: true,
-        backgroundColor: Colors.blue,
-      ),
-      body: Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          color: Colors.blue,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Hoşgeldiniz",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  getLocation();
-                },
-                child: Text(
-                  "Konuma göre hava durumu",
-                  style: TextStyle(color: Colors.black),
+      // appBar: AppBar(
+      //   title: Text("Hava Durumu Nasıl"),
+      //   centerTitle: true,
+      //   backgroundColor: Colors.blue,
+      // ),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        color: Colors.blue,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              "Hoşgeldiniz",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: const LinearGradient(
+                      colors: [
+                        Colors.blue,
+                        Color.fromARGB(255, 152, 203, 153),
+                        Color.fromARGB(255, 95, 141, 179),
+                        Colors.red
+                      ], // Gradient renkleri
+                      begin: Alignment.topLeft, // Başlangıç noktası
+                      end: Alignment.bottomRight, // Bitiş noktası
+                    ),
+                  ),
+                  height: MediaQuery.of(context).size.height / 2,
+                  width: MediaQuery.of(context).size.width / 2,
+                  child: const Text(
+                    "Konuma göre hava durumu",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
-                style: ElevatedButton.styleFrom(primary: Colors.white),
-              ),
-              SizedBox(height: 10),
-              ElevatedButton(
-                onPressed: () {
-                  // "Başka il seç" butonuna tıklandığında yapılacak işlemler
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => WelcomePage()),
-                  );
-                },
-                child: Text("Farklı il seç",
-                    style: TextStyle(color: Colors.black)),
-                style: ElevatedButton.styleFrom(primary: Colors.white),
-              ),
-            ],
-          ),
+                Container(
+                  height: MediaQuery.of(context).size.height / 2,
+                  width: MediaQuery.of(context).size.width / 2,
+                  child: Card(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // "Başka il seç" butonuna tıklandığında yapılacak işlemler
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WelcomePage()),
+                        );
+                      },
+                      child: Text("Farklı il seç",
+                          style: TextStyle(color: Colors.black)),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.transparent),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
