@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/models/suggestions.dart';
 import 'package:weather_app/models/weather.dart';
 import 'package:weather_app/services/api_service.dart';
@@ -38,14 +39,14 @@ class _WeatherDetailState extends State<WeatherDetail> {
                 children: [
                   Text(
                     weatherList[0].day,
-                    style: TextStyle(
+                    style: GoogleFonts.quicksand(
                       fontSize: 16.0,
                       color: buildTextColor(weatherList[0].status),
                     ),
                   ),
                   Text(
                     weatherList[0].date,
-                    style: TextStyle(
+                    style: GoogleFonts.quicksand(
                       fontSize: 16.0,
                       color: buildTextColor(weatherList[0].status),
                     ),
@@ -64,7 +65,7 @@ class _WeatherDetailState extends State<WeatherDetail> {
                         ),
                         Text(
                           widget.secilenIl!.toUpperCase(),
-                          style: TextStyle(
+                          style: GoogleFonts.quicksand(
                             fontSize: 16.0,
                             color: buildTextColor(weatherList[0].status),
                           ),
@@ -101,7 +102,7 @@ class _WeatherDetailState extends State<WeatherDetail> {
                     ),
                     Text(
                       "${double.parse(weatherList[0].degree).round().toString()}°C",
-                      style: TextStyle(
+                      style: GoogleFonts.quicksand(
                         fontSize: 70.0,
                         fontWeight: FontWeight.w300,
                         color: buildTextColor(weatherList[0].status),
@@ -110,7 +111,7 @@ class _WeatherDetailState extends State<WeatherDetail> {
                     Text(
                       weatherList[0].description,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: GoogleFonts.quicksand(
                         fontSize: 30.0,
                         fontWeight: FontWeight.w300,
                         color: buildTextColor(weatherList[0].status),
@@ -119,36 +120,43 @@ class _WeatherDetailState extends State<WeatherDetail> {
                     const SizedBox(
                       height: 30.0,
                     ),
-                    const Text(
+                    Text(
                       "Öneriler",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: GoogleFonts.quicksand(
+                          color: Colors.white, fontSize: 20),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 100,
-                        child: Text(
-                          suggestions.oneri(),
-                          textAlign: TextAlign.start,
-                          style: TextStyle(color: Colors.white),
-                        ),
+                      child: Column(
+                        children: [
+                          Text(
+                            suggestions.oneri(),
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.quicksand(color: Colors.white),
+                          ),
+                        ],
                       ),
                     ),
-                    // Text(
-                    //   "Aktivite",
-                    //   style: TextStyle(color: Colors.white, fontSize: 20),
-                    // ),
-                    // Padding(
-                    //   padding: const EdgeInsets.all(8.0),
-                    //   child: Container(
-                    //     height: 150,
-                    //     child: Text(
-                    //       suggestions.aktiviteSeviyeleri(),
-                    //       textAlign: TextAlign.start,
-                    //       style: TextStyle(color: Colors.white),
-                    //     ),
-                    //   ),
-                    // ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Aktivite",
+                      style: GoogleFonts.quicksand(
+                          color: Colors.white, fontSize: 20),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            suggestions.aktiviteSeviyeleri(),
+                            textAlign: TextAlign.start,
+                            style: GoogleFonts.quicksand(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
                     ListView.separated(
                       shrinkWrap: true,
                       itemCount: weatherList.length - 1,
@@ -160,7 +168,7 @@ class _WeatherDetailState extends State<WeatherDetail> {
                               Text(
                                 buildWeatherListText(
                                     weatherList[index + 1].day),
-                                style: const TextStyle(
+                                style: GoogleFonts.quicksand(
                                   fontSize: 20.0,
                                 ),
                               ),
@@ -172,7 +180,7 @@ class _WeatherDetailState extends State<WeatherDetail> {
                                 children: [
                                   Text(
                                     "${double.parse(weatherList[index + 1].min).round()}°",
-                                    style: const TextStyle(
+                                    style: GoogleFonts.quicksand(
                                       fontSize: 22.0,
                                     ),
                                   ),
@@ -181,7 +189,7 @@ class _WeatherDetailState extends State<WeatherDetail> {
                                   ),
                                   Text(
                                     "${double.parse(weatherList[index + 1].max).round()}°",
-                                    style: const TextStyle(
+                                    style: GoogleFonts.quicksand(
                                       fontSize: 22.0,
                                     ),
                                   ),

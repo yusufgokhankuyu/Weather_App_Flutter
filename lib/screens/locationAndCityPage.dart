@@ -58,6 +58,7 @@ class _LocationPageState extends State<LocationPage> {
                     getLocation();
                   },
                   child: Container(
+                    padding: const EdgeInsets.all(10),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
@@ -88,6 +89,9 @@ class _LocationPageState extends State<LocationPage> {
                               fontSize: 24,
                               fontWeight: FontWeight.bold),
                         ),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Text(
                           "(Bulunduğunuz konumun hava durumunu öğrenmek için tıklayınız.)",
                           style: GoogleFonts.quicksand(
@@ -111,6 +115,7 @@ class _LocationPageState extends State<LocationPage> {
                     );
                   },
                   child: Container(
+                    padding: const EdgeInsets.all(10),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
@@ -134,11 +139,16 @@ class _LocationPageState extends State<LocationPage> {
                           Icons.cloud_sharp,
                           size: 35,
                         ),
-                        Text("Farklı il seç",
-                            style: GoogleFonts.quicksand(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black)),
+                        Text(
+                          "Farklı il seç",
+                          style: GoogleFonts.quicksand(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Text(
                           "(Türkiye'de diğer illerin hava durumunu öğrenmek için tıklayınız.)",
                           style: GoogleFonts.quicksand(
