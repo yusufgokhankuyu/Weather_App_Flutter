@@ -1,31 +1,25 @@
 # weather_app
 
-Recipe App UI and functions  with Flutter.
+WhatTheWeather App with API
 
 ## project Decription
 
-This project is a Recipe Application with Flutter.
+In this project, I displayed the data using the weather API. I used a splash screen at the beginning of my application. Additionally, the user can learn the weather forecast for a week by selecting a city from the application or learn the weather forecast based on the user's location. I used Google Maps API to find the user's location. I also created a model that recommends suggestions and activities based on the weather. It gives activity suggestions and recommendations to users according to the temperature value.
 
-Recipe App UI images:
+WhatTheWeather App UI images:
 
-Welcome Page UI and Sign Up Page UI:
+Welcome Page UI and Choose City or get Location Page UI:
 
-![SplashScreen](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/onboarding.png) ![Sign Up Screen Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots//signup.png)
+![SplashScreen](https://github.com/yusufgokhankuyu/Weather_App_Flutter/blob/master/assets/screenshots/splash.jpeg) ![Sign Up Screen Page](https://github.com/yusufgokhankuyu/Weather_App_Flutter/blob/master/assets/screenshots//chooseCityorLocation.jpeg)
 
+Plaka Page UI and Weather Detail(with get Location) Page UI:
 
-Sign In Page UI and Home Screen Page UI:
-
-![Onboarding Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/signin.png) ![Home Screen Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots//home_screen.png)
-
-
-Recipe Detail Page UI and Favorite Recipes Screen Page UI:
-
-![Recipe Detail Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/recipe_detail.png) ![Favorite Recipes Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/favorites.png)
+![Plaka Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/plaka.jpeg) ![Weather Detail Page](https://github.com/yusufgokhankuyu/Weather_App_Flutter/blob/master/assets/screenshots/locationCity.jpeg)
 
 
-Setting Screen Page UI:
+Weather Detail(with selected City) Page UI:
 
-![Setting Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/settings_page.png)
+![Weather Detail](https://github.com/yusufgokhankuyu/Weather_App_Flutter/blob/master/assets/screenshots/selectedCity.jpeg)
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
