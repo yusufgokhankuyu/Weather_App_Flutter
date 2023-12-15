@@ -1,15 +1,31 @@
 # weather_app
 
-A new Flutter project.
+Recipe App UI and functions  with Flutter.
 
-## Getting Started
+## project Decription
 
-This project is a starting point for a Flutter application.
+This project is a Recipe Application with Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+Recipe App UI images:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Welcome Page UI and Sign Up Page UI:
+
+![SplashScreen](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/onboarding.png) ![Sign Up Screen Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots//signup.png)
+
+
+Sign In Page UI and Home Screen Page UI:
+
+![Onboarding Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/signin.png) ![Home Screen Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots//home_screen.png)
+
+
+Recipe Detail Page UI and Favorite Recipes Screen Page UI:
+
+![Recipe Detail Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/recipe_detail.png) ![Favorite Recipes Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/favorites.png)
+
+
+Setting Screen Page UI:
+
+![Setting Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/settings_page.png)
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
