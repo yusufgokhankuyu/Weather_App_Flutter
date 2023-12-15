@@ -14,7 +14,7 @@ Welcome Page UI and Choose City or get Location Page UI:
 
 Plaka Page UI and Weather Detail(with get Location) Page UI:
 
-![Plaka Page](https://github.com/yusufgokhankuyu/Recipe_App_With_Flutter_YGK/blob/master/assets/screenshots/plaka.jpeg) ![Weather Detail Page](https://github.com/yusufgokhankuyu/Weather_App_Flutter/blob/master/assets/screenshots/locationCity.jpeg)
+![Plaka Page](https://github.com/yusufgokhankuyu/Weather_App_Flutter/blob/master/assets/screenshots/plaka.jpeg) ![Weather Detail Page](https://github.com/yusufgokhankuyu/Weather_App_Flutter/blob/master/assets/screenshots/locationCity.jpeg)
 
 
 Weather Detail(with selected City) Page UI:
